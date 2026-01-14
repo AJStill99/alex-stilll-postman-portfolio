@@ -1,45 +1,84 @@
 # alex-stilll-postman-portfolio
-Postman project for API testing, which aids in my overal portfolio for QA Engineering
+This repository contains a **beginner-level API testing project using Postman**, created to demonstrate fundamental API testing concepts from a QA Engineer perspective.
 
-# Postman Portfolio
+The goal of this project is to show a clear understanding of how APIs work, how to send requests, and how to validate responses using simple, readable tests. It intentionally avoids over-engineering.
 
-This repository contains an API testing project created using Postman.
+---
 
-The goal of this project is to demonstrate core QA skills when testing APIs, including:
-- Sending HTTP requests
-- Validating response status codes
-- Verifying response bodies
-- Testing both positive and negative scenarios
+## Project Focus
 
-This project focuses on clarity and QA thinking rather than advanced automation or complex scripting.
+This project focuses on:
 
-## API Under Test
+- Understanding HTTP requests and responses  
+- Validating API behaviour using Postman tests  
+- Writing simple automated checks  
+- Applying QA thinking to positive and negative scenarios  
 
-The public test API provided by https://reqres.in is used for this project.
+This is a learning-focused project designed to complement a broader QA automation portfolio.
 
-It allows safe testing of common user-related endpoints such as:
-- Retrieving users
-- Creating users
-- Handling error responses
+---
+
+## API Used
+
+**JSONPlaceholder**  
+A public, fake REST API commonly used for learning and testing.
+
+> **Note:**  
+> JSONPlaceholder does not persist data.  
+> POST, PATCH, and DELETE requests always return successful responses, even when data is invalid.  
+> This behaviour is expected and documented.
+
+---
+
+## Requests Covered
+
+The Postman collection includes the following requests:
+
+- **GET Users**  
+  Retrieve a list of users (positive scenario)
+
+- **GET User Not Found**  
+  Validate correct handling of a 404 response (negative scenario)
+
+- **POST Create User**  
+  Validate a successful creation response
+
+- **PATCH Update User**  
+  Validate partial update behaviour and response content
+
+- **DELETE User**  
+  Validate expected delete response status codes
+
+---
+
+## Testing Approach
+
+Each request includes **post-response tests** written in JavaScript to validate:
+
+- HTTP status codes  
+- Presence of expected fields in the response  
+- Basic response structure  
+
+These tests are written as lightweight QA checks, similar to simple test cases.
+
+---
 
 ## Tools Used
 
-- Postman
-- Reqres public API
+- Postman  
+- JavaScript (Postman test scripts)
 - GitHub
 
-## Scope
+---
 
-The project includes:
-- Basic GET and POST requests
-- Simple automated checks using Postman tests
-- Intentional negative test cases
+## Purpose
 
-## Notes
+This project exists to demonstrate:
 
-This is a learning-focused project and may be extended over time as API testing skills improve.
+- API testing fundamentals  
+- Clear and intentional test coverage  
+- Beginner-level QA reasoning and validation  
 
-JSONPlaceholder always returns 201 on POST requests, even for invalid data.
-This illustrates how negative tests may behave differently depending on the API.
+It is intended to complement my Playwright UI automation portfolio.
 
 
