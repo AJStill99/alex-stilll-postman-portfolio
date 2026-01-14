@@ -39,3 +39,7 @@ The project includes:
 
 This is a learning-focused project and may be extended over time as API testing skills improve.
 
+JSONPlaceholder always returns 201 on POST requests, even for invalid data.
+This illustrates how negative tests may behave differently depending on the API.
+
+
